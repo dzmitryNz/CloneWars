@@ -18,7 +18,9 @@ function Receipts() {
           <h2 onClick={ handleClick }>{ receiptsTitle }</h2>
       </header>
       <div className="wrapper">
-        <div className="content"></div>
+        <div className="content">
+          Content Here
+        </div>
         <div className="buttons">
         <Button buttonName = { next } target = "mode_ingredients" />
         </div>
