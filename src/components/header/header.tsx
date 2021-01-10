@@ -54,7 +54,7 @@ function header() {
   const light = "light_mode";
   const dark = "dark_mode";
   const hours = new Date().getHours();
-  const shedule = hours > 19 || hours < 8 ? dark : light;
+  const shedule = hours > 18 || hours < 8 ? dark : light;
   const constTheme = themePref === "dark_mode" ? dark : light; 
   const theme = themePref === "schedule" ? shedule : themePref;
   const iconTheme = themePref;

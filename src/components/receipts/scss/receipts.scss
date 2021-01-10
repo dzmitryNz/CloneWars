@@ -2,3 +2,45 @@
   grid-area: receipts;
   text-align: center;
 }
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  max-height: 80vh;
+}
+
+
+.receipt {
+  width: 285px;
+  height: 285px;
+  margin: 10px;
+  border-radius: 10px;
+  
+  img {
+    position: relative;
+    top: 0;
+  }
+
+  .receipt-category {
+    position: relative;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .receipt-name {
+    position: relative;
+    height: 56px;
+    top: 205px;
+    border-bottom-left-radius: 10px;
+    font-size: 20px;
+    border-bottom-right-radius: 10px;
+    background: rgba(0,0,0,0.75);
+  }
+  .receipt-ingrredients {
+    position: relative;
+    top: 30px;
+  }
+}
