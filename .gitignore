@@ -25,3 +25,7 @@ yarn-error.log*
 # scss tamplate
 *.css
 *.css.map
+
+.eslintcache
+.prettierrc
+debug.log

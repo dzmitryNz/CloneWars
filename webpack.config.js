@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
-  entry: './src/index.tsx',
+  entry: './src/index.js',
   mode: 'development',
   output: {
     filename: '[name].bundle.js',
