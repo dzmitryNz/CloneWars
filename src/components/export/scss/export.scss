@@ -1,0 +1,42 @@
+.export {
+  grid-area: export;
+  text-align: center;
+  max-width: calc(100vw - 105px);
+  color: inherit;
+  background-color: inherit;
+
+    .content {
+      display: grid;
+      grid-template-rows: 0px calc(100vh - 42px);
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "modes modes"
+        "mode mode";
+      max-height: calc(100vh - 110px);
+      max-width: calc(100vw - 105px);
+      justify-content: space-around;
+      color: inherit;
+      background-color: inherit;
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+  .export {
+  grid-area: export;
+  text-align: center;
+  max-width: 100vw;
+  color: inherit;
+  background-color: inherit;
+
+    .content {
+      max-height: calc(100vh - 122px);
+      max-width: 100vw;
+      justify-content: space-around;
+      color: inherit;
+      background-color: inherit;
+    }
+    
+  }
+}

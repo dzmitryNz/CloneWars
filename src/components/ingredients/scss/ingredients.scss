@@ -1,0 +1,334 @@
+.ingredients {
+  grid-area: ingredients;
+  text-align: center;
+  max-width: calc(100vw - 105px);
+  background-color: inherit;
+  color: inherit;
+  border-color: inherit;
+
+.content {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 350px;
+  grid-template-areas:
+    "ingredient menus"
+    "ingredient menus"
+    "ingredient favorites";
+  max-height: calc(100vh - 42px);
+  max-width: calc(100vw - 105px);
+  justify-content: space-around;
+  background-color: inherit;
+  color: inherit;
+  border-color: inherit;
+}
+
+.ingredients-wrapper {
+  grid-area: ingredient;
+  display: block;
+  background-color: inherit;
+  max-height: calc(100vh - 45px);
+  color: inherit;
+  border-color: inherit;
+  overflow: auto;
+
+    .time, .ingredient {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas:
+      "ingname ingdotted ingmeasure ingqty";
+    min-width: 300px;
+    margin: 5px 0;
+
+      .ingredient-name {
+        grid-area: ingname;
+        text-align: left;
+        width: fit-content;
+        margin: 0 10px;
+        place-self: end;
+        margin: 0 5px;
+        font-size: 18px;
+        white-space: nowrap;
+      }
+      .ingredient-gridname {
+        grid-area: ingname;
+        text-align: left;
+        width: fit-content;
+        margin: 0 10px;
+        place-self: end;
+        margin: 0 5px;
+        font-size: 18px;
+        white-space: nowrap;
+        line-height: 2em;
+      }
+      .ingredient-dotted {
+      grid-area: ingdotted;
+      border-bottom: 1px dotted;
+      border-color: inherit;
+      min-width: 20px;
+      }
+
+      .ingredient-grid {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: auto auto;
+      grid-template-areas:
+      "ingmeas ingmeas"
+      "ingqt ingqt";
+
+      .ingredient-gridmeas {
+      grid-area: ingmeas;
+      margin: 0px 3px;
+      line-height: 20px;
+      }
+      }
+
+      .ingredient-meas {
+       grid-area: ingmeasure;
+       text-align: right;
+       width: fit-content;
+       place-self: end;
+       margin: 0 5px;
+      }
+
+      .ingredient-qty {
+        grid-area: ingqty;
+        margin: 0 5px;
+        font-size: 18px;
+        white-space: nowrap;
+       margin: 0 5px;
+      }
+    }
+}
+
+.menus {
+  grid-area: menus;
+  display: block;
+  background-color: inherit;
+  color: inherit;
+  border-color: inherit;
+}
+
+.favorites {
+  grid-area: favorites;
+  display: block;
+  background-color: inherit;
+  color: inherit;
+  border-color: inherit;
+}
+
+.category-header, 
+.menus-header, 
+.favorites-header {
+  background-color: rgb(80, 129, 80);
+  // border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 25px;
+  padding: 3px 0px;
+  margin: 0 35% 0 0px;
+  font-size: 16px;
+  color: snow;
+}
+
+.favorites-content,
+.menus-content {
+  // display: flex;
+  // flex-wrap: wrap;
+  overflow: auto;
+  max-height: calc(100vh / 2);
+  justify-content: space-between;
+  background-color: inherit;
+  color: inherit;
+}
+
+  .menue,
+  .favorite {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menue-add,
+  .menue-favorite,
+  .favorite-add,
+  .favorite-favorite {
+    font-size: 24px;
+  }
+
+  .header-menue {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid;
+      border-color: inherit;
+      padding: 3px 2px;
+    }
+
+  .menue {
+      text-align: left;
+    
+
+    .portions {
+      display: flex;
+
+      .menue-portions {
+          margin: 0 2px;
+          font-size: 20px;
+      }
+
+    }
+
+    .menue-buttons {
+      display: flex;
+    }
+
+    .menue-meal {
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    margin: 2px 0 2px 5px;
+    line-height: 23px;
+    font-size: 19px;
+    }
+  } 
+  
+  .menue-meal:hover,
+  .recent-meal:hover,
+  .favorite-meal:hover,
+  .recent-add:hover,
+  .recent-favorite:hover,
+  .menue-add:hover,
+  .menue-favorite:hover,
+  .favorite-add:hover,
+  .favorite-favorite:hover,
+  .menue-add:hover,
+  .menue-favorite:hover {
+    cursor: pointer;
+    color: #508150;
+    transition: all 0.2s;
+    font-weight: 600;
+  }
+
+  .menue-meal:hover,
+  .recent-meal:hover,
+  .favorite-meal:hover {
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+.receipt {
+    display: grid;
+    grid-template-rows: auto 30px 10px;
+    grid-template-columns: 190px;
+    grid-template-areas:
+        "see"
+        "buttons"
+        "mealName";
+    width: 190px;
+    height: 190px;
+    margin: 0px 10px 70px 10px;
+    border-radius: 100px; 
+  
+  .receipt-buttons{
+    grid-area: buttons;
+    display: flex;
+    justify-content: space-around;
+
+  .receipt-add {
+    position: relative;
+    text-align: left;
+    right: 25px;
+    top: 10px;
+    z-index: 1;
+  }
+
+  .receipt-favorite {
+    position: relative;
+    text-align: right;
+    left: 25px;
+    top: 10px;
+    z-index: 1;
+  }
+
+  .receipt-add:hover,
+  .receipt-favorite:hover {
+    cursor: pointer;
+  }
+  }
+
+  .receipt-see {
+    grid-area: see;
+  }
+
+  .receipt-see:hover {
+    cursor: pointer;
+  }
+
+  .receipt-meal {
+    grid-area: mealName;
+    position: relative;
+    height: 56px;
+    top: 10px;
+    font-size: 15px;
+    padding: 2px 5px;
+    text-emphasis: none;
+    // border-bottom-left-radius: 10px;
+    // border-bottom-right-radius: 100px;
+    // background: rgba(0, 0, 0, 0.75);
+  }
+  .receipt-ingrredients {
+    position: relative;
+    top: 30px;
+  }
+
+  }
+
+.receipt:hover {
+  border-radius: 10px;
+  transition: all 0.1s;
+  width: 200px;
+  height: 200px;
+  margin: 0px 5px 45px 5px;
+
+  .receipt-meal {
+    position: relative;
+    top: 10px;
+    font-size: 18px;
+    padding: 2px 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    // background: rgba(0, 0, 0, 0.75);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .ingredients {
+  grid-area: ingredients;
+  text-align: center;
+  max-width: 100vw;
+  color: inherit;
+  background-color: inherit;
+
+    .content {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 250px;
+  grid-template-areas:
+    "ingredient menus"
+    "ingredient menus"
+    "ingredient favorites";
+  max-height: calc(100vh - 110px);
+  max-width: 100vw;
+  justify-content: space-around;
+  background-color: inherit;
+  color: inherit;
+  border-color: inherit;  
+  }
+
+
+  }
+}
+

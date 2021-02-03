@@ -1,0 +1,341 @@
+.storages {
+  grid-area: storages;
+  text-align: center;
+  max-width: calc(100vw - 110px);
+  color: inherit;
+  background-color: inherit;
+
+    .content {
+    max-height: calc(100vh - 42px);
+    max-width: calc(100vw - 111px);
+    justify-content: space-around;
+    color: inherit;
+    background-color: inherit;
+    overflow: auto;
+    }
+
+    .storages-modes {
+     grid-area: modes;
+     display: flex;
+     justify-content: space-around;
+     text-align: center;
+     font-size: 16px;
+     color: inherit;
+     background-color: inherit;
+    }
+
+    .fridge-header,
+    .fridgetemp-header,
+    .pantry-header,
+    .pantrytemp-header,
+    .freezertemp-header,
+    .freezer-header,
+    .pantry-header{
+      color: #518051;
+    }
+
+    .fridge-minus, .fridge-plus,
+    .fridgemin-minus, .fridgemin-plus,
+    .fridgemax-minus, .fridgemax-plus,
+    .pantry-minus, .pantry-plus,
+    .pantrymin-minus, .pantrymin-plus,
+    .pantrymax-minus, .pantrymax-plus,
+    .freezer-minus, .freezer-plus,
+    .freezermax-minus, .freezermax-plus,
+    .freezermin-minus, .freezermin-plus {
+      margin: 0 20px;
+      font-size: 45px;
+    }
+
+    .fridge-minus::selection, .fridge-plus::selection,
+    .fridgemin-minus::selection, .fridgemin-plus::selection,
+    .fridgemax-minus::selection, .fridgemax-plus::selection,
+    .freezertemp-minus::selection, .freezertemp-plus::selection,
+    .pantry-minus::selection, .pantry-plus::selection,
+    .pantrymin-minus::selection, .pantrymin-plus::selection,
+    .pantrymax-minus::selection, .pantrymax-plus::selection,
+    .freezertemp-minus::selection, .freezertemp-plus::selection,
+    .freezer-minus::selection, .freezer-plus::selection {
+      background: none;
+    }
+
+    .fridge-minus:hover, .fridge-plus:hover,
+    .fridgemin-minus:hover, .fridgemin-plus:hover,
+    .fridgemax-minus:hover, .fridgemax-plus:hover,
+    .pantry-minus:hover, .pantry-plus:hover,
+    .pantrymin-minus:hover, .pantrymin-plus:hover,
+    .pantrymax-minus:hover, .pantrymax-plus:hover,
+    .freezertemp-minus:hover, .freezertemp-plus:hover,
+    .freezer-minus:hover, .freezer-plus:hover {
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #518051;
+    }
+    
+    .fridge-minus:active, .fridge-plus:active,
+    .fridgemin-minus:active, .fridgemin-plus:active,
+    .fridgemax-minus:active, .fridgemax-plus:active,
+    .pantrymin-minus:active, .pantrymin-plus:active,
+    .pantrymax-minus:active, .pantrymax-plus:active,
+    .freezertemp-minus:active, .freezertemp-plus:active,
+    .freezer-minus:active, .freezer-plus:active,
+    .pantry-plus:active, .pantry-minus:active  {
+      transition: all 0.2s;
+      color: #91ad91;
+    }
+
+    .pantry {
+     display: grid;
+     grid-template-rows: 30px 30px 13vh;
+     grid-template-columns: 12vw 1fr 1fr;
+     grid-template-areas:
+        "pantryicon pantryheader pantrytempheader"
+        "pantryicon pantrymeasure pantrytempmeasure"
+        "pantryicon pantryswitcher pantrytempswitcher";
+     justify-content: space-around;
+     font-size: 2rem;
+     margin-left: 10px;
+      // max-height: calc(100vh - 125px);
+      // max-width: calc(100vw - 105px);
+
+      .pantry-icon {
+        grid-area: pantryicon;
+        background: url(../assets/images/pantry.svg) no-repeat center center;
+        height: 18vh;
+        align-self: center;
+      }
+
+      .pantry-header {
+          grid-area: pantryheader;
+          text-align: center;
+        }
+
+        .pantry-switcher {
+          grid-area: pantryswitcher;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .pantrytemp-header {
+          grid-area: pantrytempheader;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden; 
+        }
+
+        .pantrytemp-switcher {
+          grid-area: pantrytempswitcher;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .pantry-subheader {
+          grid-area: pantrymeasure;
+          text-align: center;
+        }
+
+      .freezertemp-subheader {
+          grid-area: freezertempmeasure;
+          text-align: center;
+        }
+
+      .freezertemp-header {
+          grid-area: freezertempheader;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;  
+        }
+
+      .freezertemp-switcher {
+          grid-area: freezertempswitcher;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    }
+    
+    .freezer {
+     display: grid;
+     grid-template-rows: 40px 20px 13vh;
+     grid-template-columns: 12vw 1fr 1fr;
+     grid-template-areas:
+        "freezericon freezerheader freezertempheader"
+        "freezericon freezermeasure freezertempmeasure"
+        "freezericon freezerswitcher freezertempswitcher";
+     justify-content: space-around;
+     font-size: 2rem;
+     margin-left: 10px;
+      // max-height: calc(100vh - 125px);
+      // max-width: calc(100vw - 105px);
+
+      .freezer-icon {
+        grid-area: freezericon;
+        background: url(../assets/images/freezer.svg) no-repeat center center;
+        height: 18vh;
+        align-self: center;
+      }
+
+      .freezer-header {
+          grid-area: freezerheader;
+          text-align: center;
+        }
+
+        .freezer-switcher {
+          grid-area: freezerswitcher;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .freezertemp-header {
+          grid-area: freezertempheader;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden; 
+        }
+
+        .freezertemp-switcher {
+          grid-area: freezertempswitcher;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .freezer-subheader {
+          grid-area: freezermeasure;
+          text-align: center;
+        }
+
+      .freezertemp-subheader {
+          grid-area: freezertempmeasure;
+          text-align: center;
+        }
+
+      .freezertemp-header {
+          grid-area: freezertempheader;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;  
+        }
+
+      .freezertemp-switcher {
+          grid-area: freezertempswitcher;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    }
+
+    .fridge {
+        display: grid;
+      grid-template-rows: 40px 20px 13vh;
+      grid-template-columns: 12vw 1fr 1fr;
+      grid-template-areas:
+        "fridgeicon fridgeheader fridgetempheader"
+        "fridgeicon fridgemeasure fridgetempmeasure"
+        "fridgeicon fridgeswitcher fridgetempswitcher";
+      justify-content: space-around;
+      font-size: 2rem;
+      margin-left: 10px;
+      // max-height: calc(100vh - 125px);
+      // max-width: calc(100vw - 105px);
+
+      .fridge-icon {
+        grid-area: fridgeicon;
+        background: url(../assets/images/fridge.svg) no-repeat center center;
+        height: 18vh;
+        align-self: center;
+      }
+
+      .fridge-header {
+          grid-area: fridgeheader;
+          text-align: center;
+        }
+
+      .fridge-subheader {
+          grid-area: fridgemeasure;
+          text-align: center;
+        }
+
+      .fridgetemp-subheader {
+          grid-area: fridgetempmeasure;
+          text-align: center;
+        }
+
+        .fridge-switcher {
+          grid-area: fridgeswitcher;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .fridgetemp-header {
+          grid-area: fridgetempheader;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;  
+        }
+
+        .fridgetemp-switcher {
+          grid-area: fridgetempswitcher;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+  .storages {
+  grid-area: storages;
+  text-align: center;
+  max-width: 100vw;
+  color: inherit;
+  background-color: inherit;
+
+    .content {
+    max-height: calc(100vh - 120px);
+    max-width: 100vw;
+    justify-content: space-around;
+    color: inherit;
+    background-color: inherit;
+    overflow: auto;
+    }
+
+      .fridge-minus, .fridge-plus,
+    .fridgemin-minus, .fridgemin-plus,
+    .fridgemax-minus, .fridgemax-plus,
+    .pantry-minus, .pantry-plus,
+    .pantrymin-minus, .pantrymin-plus,
+    .pantrymax-minus, .pantrymax-plus,
+    .freezer-minus, .freezer-plus,
+    .freezermax-minus, .freezermax-plus,
+    .freezermin-minus, .freezermin-plus {
+      margin: 0 1px;
+      font-size: 30px;
+    }
+
+    .fridge-header,
+    .fridgetemp-header,
+    .pantry-header,
+    .pantrytemp-header,
+    .freezertemp-header,
+    .freezer-header,
+    .pantry-header{
+      font-size: 24px;
+    }
+
+    .fridgetemp-subheader,
+    .fridge-subheader,
+    .pantrytemp-subheader,
+    .freezer-subheader,
+    .freezertemp-subheader,
+    .pantry-subheader {
+      font-size: 22px;
+    }
+
+  }
+}
